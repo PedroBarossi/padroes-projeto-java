@@ -1,5 +1,10 @@
 package com.dio;
 
+import com.dio.singleton.SingletonEager;
+import com.dio.singleton.SingletonLazy;
+import com.dio.singleton.SingletonLazyHolder;
+import com.dio.strategy.*;
+
 public class Test {
 
     public static void main(String[] args) {
@@ -19,6 +24,25 @@ public class Test {
         System.out.println(lazyhol);
         lazyhol = SingletonLazyHolder.getInstancia();
         System.out.println(lazyhol);*/
+
+        Comportamento normal = new ComportamentoNormal();
+        Comportamento defensivo = new ComportamentoDefensivo();
+        Comportamento agressivo = new ComportamentoAgressivo();
+
+        Robo robo = new Robo();
+        robo.setComportamento(normal);
+
+        robo.mover();
+        robo.mover();
+
+        robo.setComportamento(defensivo);
+
+        robo.mover();
+        robo.mover();
+
+        robo.setComportamento(agressivo);
+        robo.mover();
+        robo.mover();
     }
 
 }

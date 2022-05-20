@@ -3,7 +3,7 @@ Instância estática acessível através de
 método estático público
  */
 
-package com.dio;
+package com.dio.singleton;
 
 /**
  * Singleton "apressado"
