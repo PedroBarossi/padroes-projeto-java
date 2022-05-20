@@ -1,5 +1,6 @@
 package com.dio;
 
+import com.dio.facade.Facade;
 import com.dio.singleton.SingletonEager;
 import com.dio.singleton.SingletonLazy;
 import com.dio.singleton.SingletonLazyHolder;
@@ -25,6 +26,7 @@ public class Test {
         lazyhol = SingletonLazyHolder.getInstancia();
         System.out.println(lazyhol);*/
 
+        /*Teste Strategy
         Comportamento normal = new ComportamentoNormal();
         Comportamento defensivo = new ComportamentoDefensivo();
         Comportamento agressivo = new ComportamentoAgressivo();
@@ -42,7 +44,10 @@ public class Test {
 
         robo.setComportamento(agressivo);
         robo.mover();
-        robo.mover();
+        robo.mover();*/
+
+        Facade facade = new Facade();
+        facade.migrarCliente("Pedro","54786380");
     }
 
 }
